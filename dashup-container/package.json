@@ -8,10 +8,14 @@
   "author": "fidsusj",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@polymer/lit-element": "^0.6.5",
     "@polymer/polymer": "^3.0.0-pre.12",
-    "@webcomponents/webcomponentsjs": "^1.0.20"
+    "gridstack": "^0.4.0"
   },
   "resolutions": {
     "@webcomponents/webcomponentsjs": "1.0.20"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.1"
   }
 }
