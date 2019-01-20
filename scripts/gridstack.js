@@ -21,7 +21,7 @@ $(function() {
             {x: 2, y: 1, width: 1, height: 1},
             {x: 3, y: 0, width: 1, height: 1}];
         _.each(items, function(node) {
-            grid.addWidget($('<div><div class="grid-stack-item-content"><dashup-container rows="2" cols="2" pos="2"></dashup-container></div><div/>'),
+            grid.addWidget($('<div><div class="grid-stack-item-content"><time-clock rows="2" cols="2" pos="2"></time-clock></div><div/>'),
                 node.x, node.y, node.width, node.height);
         }, this);
     });
