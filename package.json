@@ -1,0 +1,14 @@
+{
+  "name": "webcomponents",
+  "version": "1.0.0",
+  "flat": true,
+  "description": "e-portfolio project on WebComponents using Polymer framework",
+  "main": "/index.html",
+  "repository": "https://github.com/fidsusj/WebComponents.git",
+  "author": "fidsusj",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "gridstack": "^0.4.0"
+  },
+  "devDependencies": {}
+}

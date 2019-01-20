@@ -1,8 +1,4 @@
 import { LitElement, html } from '@polymer/lit-element';
-import 'jquery'
-import 'jquery-ui'
-import 'lodash'
-import 'gridstack'
 
 // run npm i --save <name>
 
@@ -10,23 +6,9 @@ class DashupContainer extends LitElement {
 
     render() {
         return html`
-            <p>${this.rows},${this.cols},${this.pos}</p>
-            <div class="grid-stack">
-                <div class="grid-stack-item"
-                     data-gs-x="0" data-gs-y="0"
-                     data-gs-width="4" data-gs-height="2">
-                    <div class="grid-stack-item-content">
-                         
-                    </div>
-                </div>
-                <div class="grid-stack-item"
-                    data-gs-x="4" data-gs-y="0"
-                    data-gs-width="4" data-gs-height="4">
-                   <div class="grid-stack-item-content">
-                   
-                   </div>
-                </div>
-            </div>
+
+        <p>Attribute: Rows: ${this.rows}, Cols: ${this.cols}, Pos: ${this.pos}</p>
+
     `;
     }
 
@@ -42,15 +24,18 @@ class DashupContainer extends LitElement {
         return {
             rows: {
                 type: Number,
-                attrName: "rows"
+                attrName: "rows",
+                value: '1'
             },
             cols: {
                 type: Number,
-                attrName: "cols"
+                attrName: "cols",
+                value: '1'
             },
             pos: {
                 type: Number,
-                attrName: "pos"
+                attrName: "pos",
+                value: '1'
             }
         };
     }
@@ -83,15 +68,15 @@ class DashupContainer extends LitElement {
         this.setAttribute('pos', val);
     }
 
-    renderCallback(){
-        var options = {
-            cellHeight: 80,
-            verticalMargin: 10
-        };
-        $('.grid-stack').gridstack(options);
+    connectedCallback(){
+        super.connectedCallback();
     }
 
-    attributeChanged(name, oldValue, newValue) {
+    disconnectedCallback(){
+        super.disconnectedCallback();
+    }
+
+    attributeChangedCallback(name, oldValue, newValue){
 
     }
 
