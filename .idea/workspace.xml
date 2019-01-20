@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/gridstack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/gridstack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashup-container/dashup-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/dashup-container/dashup-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashup-container/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashup-container/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashup-container/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashup-container/polymer.json" beforeDir="false" afterPath="$PROJECT_DIR$/polymer.json" afterDir="false" />
-    </list>
+    <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -452,12 +442,12 @@
       <workItem from="1546460353321" duration="11608000" />
       <workItem from="1547329358017" duration="9142000" />
       <workItem from="1547394314713" duration="71000" />
-      <workItem from="1547977342496" duration="4093000" />
+      <workItem from="1547977342496" duration="4367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26578000" />
+    <option name="totallyTimeSpent" value="26852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,7 +461,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21348314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21348314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -483,8 +473,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49947312" weight="0.32929516" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4970258" visible="true" weight="0.21562952" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5029742" side_tool="true" visible="true" weight="0.21562952" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49636483" visible="true" weight="0.7221418" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50363517" side_tool="true" visible="true" weight="0.7221418" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
