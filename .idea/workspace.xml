@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/stock-panel/stock-panel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-panel/stock-panel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/gridstack.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/gridstack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/gridstack.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/gridstack.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time-clock/time-clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/time-clock/time-clock.js" afterDir="false" />
-    </list>
+    <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -42,7 +32,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="4" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="10" />
+          <entry key="js" value="11" />
           <entry key="json" value="8" />
           <entry key="md" value="3" />
           <entry key="xml" value="1" />
@@ -54,7 +44,7 @@
           <entry key="HTML" value="4" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="8" />
-          <entry key="JavaScript" value="10" />
+          <entry key="JavaScript" value="11" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="1" />
@@ -80,7 +70,7 @@
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
         <counts>
-          <entry key="git.branch.checkout.remote" value="1" />
+          <entry key="git.branch.checkout.remote" value="2" />
           <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
@@ -88,84 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/time-clock/time-clock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
-              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="81" column="110" selection-start-line="81" selection-start-column="110" selection-end-line="81" selection-end-column="110" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/gridstack.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88">
-              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/time-clock/time-clock.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/polymer.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/background.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/gridstack.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            <state relative-caret-position="69">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -209,8 +126,8 @@
         <option value="$PROJECT_DIR$/time-clock/time-clock.js" />
         <option value="$PROJECT_DIR$/scripts/gridstack.js" />
         <option value="$PROJECT_DIR$/styles/main.css" />
-        <option value="$PROJECT_DIR$/stock-panel/stock-panel.js" />
         <option value="$PROJECT_DIR$/stock-panel/stock-panel.css" />
+        <option value="$PROJECT_DIR$/stock-panel/stock-panel.js" />
       </list>
     </option>
   </component>
@@ -263,26 +180,6 @@
             <path>
               <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="stock-panel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="time-clock" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +235,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50426000" />
+    <option name="totallyTimeSpent" value="50480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -353,7 +250,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21348314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21348314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,8 +262,8 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4990086" weight="0.32850942" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5472571" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4527429" side_tool="true" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.54659617" visible="true" weight="0.36324167" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.45340383" side_tool="true" visible="true" weight="0.36324167" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -468,13 +365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="81" column="110" selection-start-line="81" selection-start-column="110" selection-end-line="81" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -486,6 +376,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-88">
           <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>

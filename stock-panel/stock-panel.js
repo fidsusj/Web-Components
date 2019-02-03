@@ -2,7 +2,6 @@ import { LitElement, html } from '@polymer/lit-element';
 
 // run npm i --save <name>
 //${this.company}
-
 class StockPanel extends LitElement {
 
     render() {
