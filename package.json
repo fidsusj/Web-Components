@@ -9,6 +9,5 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "gridstack": "^0.4.0"
-  },
-  "devDependencies": {}
+  }
 }

@@ -1,0 +1,60 @@
+.left {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    height: 100%;
+    width: 50%;
+    font: normal 2.0rem/normal "Montserrat", Times, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.component {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.component > #development{
+    font: normal 1.5rem/normal "Montserrat", Times, sans-serif;
+}
+
+i {
+    display: inline-block;
+    padding: 3px;
+    margin: 0 10px 0 25px;
+}
+
+i.up {
+    border: solid green;
+    border-width: 0 3px 3px 0;
+}
+
+i.down {
+    border: solid red;
+    border-width: 0 3px 3px 0;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#company {
+    font: normal 2.5rem/normal "Montserrat", Times, sans-serif;
+    background-color: rgba(255,255,255,0);
+    border: none;
+    padding: 10px 10px;
+    width: 100%;
+    text-align: center;
+}
