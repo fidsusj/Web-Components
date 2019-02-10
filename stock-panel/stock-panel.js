@@ -1,7 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
 
-// run npm i --save <name>
-//${this.company}
 class StockPanel extends LitElement {
 
     render() {
@@ -11,7 +9,7 @@ class StockPanel extends LitElement {
             
             <div class="left">
                 <div class="component">
-                    <input id="company" type="text" value="SAP"/>
+                    <input id="company" type="text" value="SAP" @change="${this.setCompany}"/>
                 </div>
                 <div class="component">
                     <span id="development"></span>
@@ -55,11 +53,12 @@ class StockPanel extends LitElement {
         this.setAttribute('company', val);
     }
 
+    setCompany(e){
+        this.company = e.target.value;
+    }
+
     firstUpdated(changedProperties) {
-        let input = this.component.querySelector('input');
-        input.addEventListener('change', () => {
-            this.company = input.value;
-        });
+
     }
 
     connectedCallback(){
