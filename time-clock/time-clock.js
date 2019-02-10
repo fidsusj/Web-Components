@@ -1,6 +1,6 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement, html } from 'lit-element';
 
-class Clock extends LitElement {
+class TimeClock extends LitElement {
 
     render() {
         return html`
@@ -67,4 +67,4 @@ class Clock extends LitElement {
     }
 
 }
-customElements.define(Clock.name, Clock);
+customElements.define(TimeClock.name, TimeClock);

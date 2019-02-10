@@ -8,6 +8,8 @@
   "author": "fidsusj",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "gridstack": "^0.4.0"
+    "@polymer/lit-element": "latest",
+    "gridstack": "^0.4.0",
+    "lit-element": "^2.0.1"
   }
 }
