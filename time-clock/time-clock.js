@@ -1,6 +1,6 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement, html } from 'lit-element';
 
-class TimeClock extends LitElement {
+export class TimeClock extends LitElement {
 
     render() {
         return html`
@@ -38,10 +38,6 @@ class TimeClock extends LitElement {
             this.component.getElementById("hours").style.cssText =
                 "-webkit-transform:rotate(" + h + "deg);";
         }, 1000);
-    }
-
-    static get observedAttributes() {
-        return [];
     }
 
     static get properties() {

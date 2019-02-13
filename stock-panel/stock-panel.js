@@ -1,6 +1,6 @@
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement, html } from 'lit-element';
 
-class StockPanel extends LitElement {
+export class StockPanel extends LitElement {
 
     render() {
         return html`
@@ -25,10 +25,6 @@ class StockPanel extends LitElement {
     constructor() {
         super();
         this.component = this.shadowRoot;
-    }
-
-    static get observedAttributes() {
-        return ["company"];
     }
 
     static get properties() {
