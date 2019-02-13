@@ -10,6 +10,7 @@
   "dependencies": {
     "@polymer/lit-element": "^0.7.1",
     "@webcomponents/webcomponentsjs": "^2.2.7",
-    "gridstack": "^0.4.0"
+    "gridstack": "^0.4.0",
+    "lit-html": "^1.0.0-rc.2"
   }
 }
