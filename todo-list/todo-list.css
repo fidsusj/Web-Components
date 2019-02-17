@@ -1,0 +1,13 @@
+todo-list {
+    display: block;
+    padding: 7px 10px;
+}
+
+todo-list .input-layout {
+    display: flex;
+}
+
+todo-list .input-layout vaadin-text-field {
+     flex: 1;
+    margin-right: 10px;
+ }

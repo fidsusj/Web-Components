@@ -1,4 +1,5 @@
 import { LitElement, html } from 'lit-element';
+import '@vaadin/vaadin-text-field';
 
 export class StockPanel extends LitElement {
 
@@ -7,18 +8,27 @@ export class StockPanel extends LitElement {
 
             <link rel="stylesheet" type="text/css" href="/stock-panel/stock-panel.css" />
             
-            <div class="left">
+            <div class="top-level">
                 <div class="component">
-                    <input id="company" type="text" value="SAP" @change="${this.setCompany}"/>
-                </div>
-                <div class="component">
-                    <span id="development"></span>
+                    <vaadin-text-field
+                      id="company"
+                      value="SAP"
+                      @change="${this.setCompany}">
+                    </vaadin-text-field>
                 </div>
             </div>
-            <div class="right">
-                <span id="price"></span>
-            </div>
-            
+            <div class="top-level">
+                <div class="left">
+                    <div class="component">
+                        <span id="development"></span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="component">
+                        <span id="price"></span>
+                    </div>
+                </div>
+            </div>        
     `;
     }
 
