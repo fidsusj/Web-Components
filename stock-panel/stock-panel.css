@@ -1,4 +1,4 @@
-.top-level {
+.container {
     height: 50%;
     width: 100%;
 }
@@ -24,7 +24,7 @@
 i {
     display: inline-block;
     padding: 3px;
-    margin: 0 10px 0 25px;
+    margin: 0px 10px 2px 25px;
 }
 
 i.up {
@@ -50,4 +50,10 @@ i.down {
 #company {
     padding: 10px 10px;
     flex: 1;
+}
+
+#price {
+    width: 100%;
+    text-align: right;
+    padding: 0% 10% 0% 0%;
 }

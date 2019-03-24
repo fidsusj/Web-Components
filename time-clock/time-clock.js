@@ -4,9 +4,24 @@ export class TimeClock extends LitElement {
 
     render() {
         return html`
-
             <link rel="stylesheet" type="text/css" href="/time-clock/time-clock.css" />
-        
+            
+            <!-- Unfortunately styles specified in get styles do not get updated when calling requestUpdate() -->
+            <!-- 30 degrees every hour -->
+            <!-- 6 degrees every minute -->
+            <!-- 6 degrees every second -->
+            <style>
+                #hours {
+                     -webkit-transform: rotate(${30 * this.hours}deg);
+                }
+                #minutes {
+                     -webkit-transform: rotate(${6 * this.minutes}deg);
+                }
+                #seconds {
+                     -webkit-transform: rotate(${6 * this.seconds}deg);  
+                }
+             </style>
+                    
             <div class="clock">
                   <div id="hours"></div>
                   <div id="minutes"></div>
@@ -17,50 +32,27 @@ export class TimeClock extends LitElement {
                   <div class="twelve"></div>
                   <div class="center"></div>
             </div>
-              
-    `;
-    }
-
-    constructor() {
-        super();
-        this.component = this.shadowRoot;
-
-        window.setInterval(() => {
-            var oDate = new Date();
-            var h = 30 * ((oDate.getHours() % 12) + oDate.getMinutes() / 60); // 30 degrees hour
-            var m = 6 * oDate.getMinutes(); // 6 degrees every minute
-            var s = 6 * oDate.getSeconds(); // 6 degrees every second
-            // setting the rotate CSS attribute to those degree values -->
-            this.component.getElementById("seconds").style.cssText =
-                "-webkit-transform:rotate(" + s + "deg);";
-            this.component.getElementById("minutes").style.cssText =
-                "-webkit-transform:rotate(" + m + "deg);";
-            this.component.getElementById("hours").style.cssText =
-                "-webkit-transform:rotate(" + h + "deg);";
-        }, 1000);
+        `;
     }
 
     static get properties() {
         return {
-
+            hours: {type: Number, reflect: true},
+            minutes: {type: Number, reflect: true},
+            seconds: {type: Number, reflect: true}
         };
     }
 
-    static get name(){
-        return 'time-clock';
-    }
-
-    connectedCallback(){
-        super.connectedCallback();
-    }
-
-    disconnectedCallback(){
-        super.disconnectedCallback();
-    }
-
-    attributeChangedCallback(name, oldValue, newValue){
-
+    constructor() {
+        super();
+        window.setInterval(() => {
+            this.date = new Date();
+            this.hours = this.date.getHours() % 12;
+            this.minutes = this.date.getMinutes();
+            this.seconds = this.date.getSeconds();
+            this.requestUpdate();
+        }, 1000);
     }
 
 }
-customElements.define(TimeClock.name, TimeClock);
+customElements.define("time-clock", TimeClock);

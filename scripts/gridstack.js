@@ -4,18 +4,18 @@ $(function() {
         width: 4,
         height: 4,
         animate: true,
-        always_show_resize_handle: true,
+        alwaysShowResizeHandle: true,
         disableResize: true,
         cellHeight: 110,
         verticalMargin: 18,
         horizontalMargin: 9,
-        placeholder_class: 'grid-stack-placeholder',
+        placeholderClass: 'grid-stack-placeholder',
         acceptWidgets: '.grid-stack-item'
     };
     $(document.querySelector('.grid-stack')).gridstack(_.defaults(options));
     $(document.querySelector('.grid-stack')).each(function() {
         let grid = $(this).data('gridstack');
-        let items = [{x: 0, y: 0, width: 1, height: 1},
+        let items = [{x: 3, y: 1, width: 1, height: 1},
                      {x: 3, y: 0, width: 1, height: 1},
                      {x: 1, y: 0, width: 2, height: 2}];
 

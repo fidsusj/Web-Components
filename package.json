@@ -14,6 +14,6 @@
     "@vaadin/vaadin-text-field": "^2.3.2",
     "@webcomponents/webcomponentsjs": "latest",
     "gridstack": "^0.4.0",
-    "lit-element": "latest"
+    "lit-element": "^2.1.0"
   }
 }
