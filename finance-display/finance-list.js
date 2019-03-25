@@ -20,7 +20,8 @@ export class FinanceList extends LitElement {
                                                    evt.target.removeAttribute("selected");
                           }
                       }}">
-                      ${element.description}
+                      <span>${element.description}</span>
+                      <span class="${element.type === 1 ? "profit" : "loss"}">${element.price + "$"}</span>
                     </vaadin-item>
                 `;
             })}
@@ -30,7 +31,17 @@ export class FinanceList extends LitElement {
     static get styles() {
         return css`
             vaadin-item[selected] {
-                background: lightgray;
+                background: rgb(142, 185, 255);
+            }
+            
+            .profit {
+                color: green;
+                float: right;
+            }
+            
+            .loss {
+                color: red;
+                float: right;
             }
         `;
     }
@@ -74,21 +85,9 @@ export class FinanceList extends LitElement {
             type: 1,
             description: "Salary",
             price: 6000,
-            category: this.supportedCategories.JOB
-        },
-        {
-            type: -1,
-            description: "Shopping",
-            price: 70,
-            category: this.supportedCategories.LIFESTYLE
-        },
-        {
-            type: -1,
-            description: "Meeting friends",
-            price: 30,
-            category: this.supportedCategories.LIFESTYLE
+            category: 0
         }];
-        this.filter = {categories: [this.supportedCategories.LIFESTYLE],
+        this.filter = {categories: [this.supportedCategories.LIFESTYLE, this.supportedCategories.JOB],
                        priceRange: {operator: "GT",
                                     firstValue: 20
                        }

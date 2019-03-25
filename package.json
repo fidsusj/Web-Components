@@ -8,6 +8,7 @@
   "author": "fidsusj",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@google-web-components/google-chart": "^3.0.4",
     "@vaadin/vaadin-button": "^2.1.3",
     "@vaadin/vaadin-checkbox": "^2.2.7",
     "@vaadin/vaadin-item": "^2.1.0",
