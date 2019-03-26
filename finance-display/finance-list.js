@@ -59,8 +59,15 @@ export class FinanceList extends LitElement {
                                     return type(value);
                                 }
                           }},
-            supportedCategories: {type: Object}
         };
+    }
+
+    constructor(){
+        super();
+        this.transactions = [];
+        this.filter = {};
+        this.selectable = false;
+        this.restriction = "all";
     }
 
     filterPriceRange(price) {
@@ -71,29 +78,5 @@ export class FinanceList extends LitElement {
             case "BT": return price >= this.filter.priceRange.firstValue && price <= this.filter.priceRange.secondValue;
         }
     }
-
-    constructor(){
-        super();
-        this.supportedCategories = {
-            JOB: 0,
-            FOOD: 1,
-            FAMILY: 2,
-            CAR: 3,
-            LIFESTYLE: 3
-        };
-        this.transactions = [{
-            type: 1,
-            description: "Salary",
-            price: 6000,
-            category: 0
-        }];
-        this.filter = {categories: [this.supportedCategories.LIFESTYLE, this.supportedCategories.JOB],
-                       priceRange: {operator: "GT",
-                                    firstValue: 20
-                       }
-        };
-        this.selectable = true;
-    }
-
 }
 customElements.define("finance-list", FinanceList);

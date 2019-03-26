@@ -15,9 +15,9 @@ $(function() {
     $(document.querySelector('.grid-stack')).gridstack(_.defaults(options));
     $(document.querySelector('.grid-stack')).each(function() {
         let grid = $(this).data('gridstack');
-        let items = [{x: 3, y: 3, width: 1, height: 1},
-                     {x: 2, y: 3, width: 1, height: 1},
-                     {x: 0, y: 3, width: 2, height: 2},
+        let items = [{x: 3, y: 4, width: 1, height: 1},
+                     {x: 3, y: 3, width: 1, height: 1},
+                     {x: 0, y: 3, width: 3, height: 2},
                      {x: 0, y: 0, width: 4, height: 3}];
 
         grid.addWidget($('<div>' +
