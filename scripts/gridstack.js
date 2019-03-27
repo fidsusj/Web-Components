@@ -20,25 +20,25 @@ $(function() {
                      {x: 0, y: 3, width: 3, height: 2},
                      {x: 0, y: 0, width: 4, height: 3}];
 
-        grid.addWidget($('<div>' +
+        grid.addWidget($('<div class="grid-stack-item" data-gs-no-move="yes">' +
                             '<div class="grid-stack-item-content">' +
                                 '<stock-panel company="sap"></stock-panel>' +
                             '</div>' +
                          '<div/>'), items[0].x, items[0].y, items[0].width, items[0].height);
 
-        grid.addWidget($('<div>' +
+        grid.addWidget($('<div class="grid-stack-item" data-gs-no-move="yes">' +
                             '<div class="grid-stack-item-content">' +
                                 '<time-clock></time-clock>' +
                             '</div>' +
                          '<div/>'), items[1].x, items[1].y, items[1].width, items[1].height);
 
-        grid.addWidget($('<div>' +
+        grid.addWidget($('<div class="grid-stack-item" data-gs-no-move="yes">' +
                             '<div class="grid-stack-item-content">' +
                                 '<todo-list></todo-list>' +
                             '</div>' +
                          '<div/>'), items[2].x, items[2].y, items[2].width, items[2].height);
 
-        grid.addWidget($('<div>' +
+        grid.addWidget($('<div class="grid-stack-item" data-gs-no-move="yes">' +
                             '<div class="grid-stack-item-content">' +
                                 '<finance-display></finance-display>' +
                             '</div>' +

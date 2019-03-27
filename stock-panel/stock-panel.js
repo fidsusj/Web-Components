@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit-element';
-import '@vaadin/vaadin-text-field';
+import '@vaadin/vaadin-text-field/vaadin-text-field';
 
 export class StockPanel extends LitElement {
 

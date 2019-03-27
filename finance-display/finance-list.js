@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import '@vaadin/vaadin-item';
+import '@vaadin/vaadin-item/vaadin-item';
 
 export class FinanceList extends LitElement {
 
@@ -31,7 +31,7 @@ export class FinanceList extends LitElement {
     static get styles() {
         return css`
             vaadin-item[selected] {
-                background: rgb(142, 185, 255);
+                background: var(--lumo-contrast-10pct);
             }
             
             .profit {

@@ -2,6 +2,12 @@ import {LitElement, html, css} from 'lit-element';
 import {repeat} from 'lit-html/directives/repeat';
 import './finance-chart'
 import './finance-list'
+import '@vaadin/vaadin-text-field/vaadin-text-field';
+import '@vaadin/vaadin-text-field/vaadin-number-field';
+import '@vaadin/vaadin-radio-button/vaadin-radio-group';
+import '@vaadin/vaadin-radio-button/vaadin-radio-button';
+import '@vaadin/vaadin-button/vaadin-button';
+import '@vaadin/vaadin-item/vaadin-item';
 
 export class FinanceDisplay extends LitElement {
 
@@ -22,8 +28,10 @@ export class FinanceDisplay extends LitElement {
                     </vaadin-radio-group>
                     <br />
                     <vaadin-button theme="success primary">Save</vaadin-button>
+                    <vaadin-button theme="error primary">Delete All</vaadin-button>
                 </div>
                 <div class="two-one">
+                    <vaadin-item><strong>Filter bar:</strong></vaadin-item>
                     <finance-list 
                         transactions="${JSON.stringify(this.transactions)}" 
                         filter="${JSON.stringify(this.filter)}" 
@@ -40,7 +48,7 @@ export class FinanceDisplay extends LitElement {
             .grid {display: grid; height: 100%; }
             .one-one { grid-row: 1; grid-column-start: 1; grid-column-end: 11; }
             .one-two { grid-row: 1; grid-column: 11; }
-            .two-one { grid-row: 2; grid-column-start: 1; grid-column-end: 12; }
+            .two-one { grid-row: 2; grid-column-start: 1; grid-column-end: 11; }
         `;
     }
 
