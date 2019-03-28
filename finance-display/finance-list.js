@@ -5,7 +5,7 @@ export class FinanceList extends LitElement {
 
     render() {
         return html`
-            ${this.transactions.slice(0,this.restriction).filter((element) => {
+            ${this.transactions.reverse().slice(0,this.restriction).filter((element) => {
                 return (!this.filter.types || this.filter.types.includes(element.type)) && 
                        (!this.filter.descriptions || this.filter.descriptions.includes(element.description)) &&
                        (!this.filter.categories || this.filter.categories.includes(element.category)) &&
@@ -16,12 +16,12 @@ export class FinanceList extends LitElement {
                       @click="${ (evt) => {
                           if(this.selectable){
                               evt.target.seletced = !evt.target.seletced;
-                              evt.target.seletced? evt.target.setAttribute("selected", "selected") :
+                              evt.target.seletced ? evt.target.setAttribute("selected", "selected") :
                                                    evt.target.removeAttribute("selected");
                           }
                       }}">
                       <span>${element.description}</span>
-                      <span class="${element.type === 1 ? "profit" : "loss"}">${element.price + "$"}</span>
+                      <span class="${element.positive === true ? "profit" : "loss"}">${element.price + "$"}</span>
                     </vaadin-item>
                 `;
             })}

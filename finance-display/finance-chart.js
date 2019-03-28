@@ -12,30 +12,26 @@ import '@google-web-components/google-chart/google-chart.js';
 export class FinanceChart extends LitElement {
 
     render() {
-        let chartData = this.data.values.map((value) => {return [value.category, value.amount];}).reverse();
-        chartData.push([this.data.labelX, this.data.labelY]);
+        let chartData = this.data.map((value) => {return [value.category, value.amount];}).reverse();
+        chartData.push([this.labelX, this.labelY]);
         return html`
-                <google-chart data=${JSON.stringify(chartData.reverse())}> 
-                </google-chart>
+                <google-chart data=${JSON.stringify(chartData.reverse())}> </google-chart>
         `;
     }
 
     static get properties() {
         return {
-            data: {type: Object}
+            labelX: {type: String, reflect: true},
+            labelY: {type: String, reflect: true},
+            data: {type: Array}
         };
     }
 
     constructor() {
         super();
-        this.data = {
-            labelX: "categories",
-            labelY: "Spent money",
-            values: [
-                {category: "car", amount: 12},
-                {category: "wife", amount: 14}
-            ]
-        };
+        this.labelX = "x-axis";
+        this.labelY = "y-axis";
+        this.data = [];
     }
 
 }
