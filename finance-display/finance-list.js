@@ -5,11 +5,8 @@ export class FinanceList extends LitElement {
 
     render() {
         return html`
-            ${this.transactions.reverse().slice(0,this.restriction).filter((element) => {
-                return (!this.filter.types || this.filter.types.includes(element.type)) && 
-                       (!this.filter.descriptions || this.filter.descriptions.includes(element.description)) &&
-                       (!this.filter.categories || this.filter.categories.includes(element.category)) &&
-                       (!this.filter.priceRange || this.filterPriceRange(element.price))
+            ${this.transactions.sort((obj, obj2) => {
+                return obj.price < obj2.price ? 1 : -1;
             }).map((element) => {
                 return html`               
                     <vaadin-item id="selectable" tabindex="0"
@@ -56,7 +53,6 @@ export class FinanceList extends LitElement {
     static get properties() {
         return {
             transactions: {type: Array},
-            filter: {type: Object},
             selectable: {type: Boolean},
             restriction: {type: Number,
                           converter: (value, type) => {
@@ -72,19 +68,9 @@ export class FinanceList extends LitElement {
     constructor(){
         super();
         this.transactions = [];
-        this.filter = {};
         this.selectable = false;
         this.restriction = "all";
     }
 
-    filterPriceRange(price) {
-        switch(this.filter.priceRange.operator){
-            case "EQ": return price === this.filter.priceRange.firstValue;
-            case "GT": return price >= this.filter.priceRange.firstValue;
-            case "LT": return price <= this.filter.priceRange.firstValue;
-            case "BT": return price >= this.filter.priceRange.firstValue && price <= this.filter.priceRange.secondValue;
-            default: return true;
-        }
-    }
 }
 customElements.define("finance-list", FinanceList);

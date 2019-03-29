@@ -14,12 +14,13 @@ import '@vaadin/vaadin-combo-box/vaadin-combo-box'
 export class FinanceDisplay extends LitElement {
 
     render() {
+        let filteredTransactions = this.getChartData();
         let data = [];
         let sum = new Map();
-        if(this.transactions.length === 0){
+        if(filteredTransactions.length === 0){
             data.push({amount: 0, category: ""});
         } else {
-            for(let element of this.transactions){
+            for(let element of filteredTransactions){
                 if(!sum.get(element.category)){
                     sum.set(element.category, element.price)
                 } else {
@@ -47,20 +48,25 @@ export class FinanceDisplay extends LitElement {
                     </vaadin-radio-group>
                     <br />
                     <vaadin-button theme="success primary" @click="${this.handleTransactionInput}">Save</vaadin-button>
-                    <vaadin-button theme="error primary" @click="${() => { this.transactions = [];}}">Delete All</vaadin-button>
+                    <vaadin-button theme="error primary" @click="${() => { 
+                        this.transactions = [];
+                        this.filter.descriptions = [];
+                    }}">
+                    Delete All
+                    </vaadin-button>
                 </div>
                 <div class="two-one">
                     <vaadin-item><strong>Filter bar:</strong></vaadin-item>
-                    <finance-list 
-                        transactions="${JSON.stringify(this.transactions)}" 
-                        filter="${JSON.stringify(this.filter)}" 
+                    <finance-list
+                        id="finance" 
+                        transactions="${JSON.stringify(this.getListData())}"
                         restriction=3
                         selectable
                         @item-clicked="${(evt) => {
                             if(evt.detail.selected) {
                                 this.selectedItems.push(evt.detail.description);
                             } else {
-                                this.selectedItems.splice(this.selectedItems.indexOf(evt.description));
+                                this.selectedItems.splice(this.selectedItems.indexOf(evt.detail.description), 1);
                             }
                             this.requestUpdate();
                         }}">
@@ -183,6 +189,30 @@ export class FinanceDisplay extends LitElement {
             secondValue: priceTo.value ? Number(priceTo.value) : undefined
         };
         this.requestUpdate();
+    }
+
+    getChartData() {
+        return this.getListData().filter((element) => {
+            return (this.selectedItems.length === 0 || this.selectedItems.includes(element.description));
+        });
+    }
+
+    getListData() {
+        return this.transactions.slice(0,this.restriction).filter((element) => {
+            return (!this.filter.types || this.filter.types.includes(element.type)) &&
+                (!this.filter.categories || this.filter.categories.includes(element.category)) &&
+                (!this.filter.priceRange || this.filterPriceRange(element.price))
+        });
+    }
+
+    filterPriceRange(price) {
+        switch(this.filter.priceRange.operator){
+            case "EQ": return price === this.filter.priceRange.firstValue;
+            case "GT": return price >= this.filter.priceRange.firstValue;
+            case "LT": return price <= this.filter.priceRange.firstValue;
+            case "BT": return price >= this.filter.priceRange.firstValue && price <= this.filter.priceRange.secondValue;
+            default: return true;
+        }
     }
 }
 customElements.define('finance-display', FinanceDisplay);

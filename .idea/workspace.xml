@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance-display/finance-display.js" beforeDir="false" afterPath="$PROJECT_DIR$/finance-display/finance-display.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finance-display/finance-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/finance-display/finance-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -74,7 +71,7 @@
           <entry key="css" value="699" />
           <entry key="gitignore" value="74" />
           <entry key="html" value="718" />
-          <entry key="js" value="13176" />
+          <entry key="js" value="13657" />
           <entry key="json" value="85" />
           <entry key="txt" value="540" />
         </counts>
@@ -82,9 +79,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="699" />
-          <entry key="HTML" value="1083" />
+          <entry key="HTML" value="1087" />
           <entry key="JSON" value="85" />
-          <entry key="JavaScript" value="12811" />
+          <entry key="JavaScript" value="13288" />
           <entry key="PLAIN_TEXT" value="614" />
         </counts>
       </usages-collector>
@@ -99,11 +96,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="163" column="88" selection-start-line="163" selection-start-column="88" selection-end-line="163" selection-end-column="88" />
+            <state relative-caret-position="-1571">
+              <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -114,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finance-display/finance-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="496">
+              <caret line="32" column="29" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="29" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -123,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="92">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -161,6 +158,10 @@
       <find>slice</find>
       <find>...</find>
       <find>ice</find>
+      <find>selectedItems</find>
+      <find>filter.des</find>
+      <find>filter.descriptions</find>
+      <find>reverse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -198,8 +199,8 @@
         <option value="$PROJECT_DIR$/todo-list/todo-list.js" />
         <option value="$PROJECT_DIR$/finance-display/finance-chart.js" />
         <option value="$PROJECT_DIR$/scripts/gridstack.js" />
-        <option value="$PROJECT_DIR$/finance-display/finance-list.js" />
         <option value="$PROJECT_DIR$/finance-display/finance-display.js" />
+        <option value="$PROJECT_DIR$/finance-display/finance-list.js" />
       </list>
     </option>
   </component>
@@ -351,12 +352,12 @@
       <workItem from="1553629852607" duration="15371000" />
       <workItem from="1553725395782" duration="7574000" />
       <workItem from="1553783845771" duration="1698000" />
-      <workItem from="1553848797173" duration="17048000" />
+      <workItem from="1553848797173" duration="21462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158645000" />
+    <option name="totallyTimeSpent" value="163059000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -628,30 +629,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/finance-display/finance-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="496">
+          <caret line="32" column="29" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="29" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
+    <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="-1571">
+          <caret line="84" column="58" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
           <folding>
-            <element signature="e#0#52#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
+    <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="163" column="88" selection-start-line="163" selection-start-column="88" selection-end-line="163" selection-end-column="88" />
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
