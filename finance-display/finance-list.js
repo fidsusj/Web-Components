@@ -17,11 +17,18 @@ export class FinanceList extends LitElement {
                           if(this.selectable){
                               evt.target.seletced = !evt.target.seletced;
                               evt.target.seletced ? evt.target.setAttribute("selected", "selected") :
-                                                   evt.target.removeAttribute("selected");
+                                                    evt.target.removeAttribute("selected");
+                              this.dispatchEvent(new CustomEvent('item-clicked', {
+                                  detail: {
+                                      description: evt.target.innerText.split("\n")[0],
+                                      selected: evt.target.seletced
+                                  },
+                                  bubbles: true,
+                                  composed: true }));
                           }
                       }}">
                       <span>${element.description}</span>
-                      <span class="${element.positive === true ? "profit" : "loss"}">${element.price + "$"}</span>
+                      <span class="${element.type}">${element.price + "$"}</span>
                     </vaadin-item>
                 `;
             })}
@@ -76,6 +83,7 @@ export class FinanceList extends LitElement {
             case "GT": return price >= this.filter.priceRange.firstValue;
             case "LT": return price <= this.filter.priceRange.firstValue;
             case "BT": return price >= this.filter.priceRange.firstValue && price <= this.filter.priceRange.secondValue;
+            default: return true;
         }
     }
 }

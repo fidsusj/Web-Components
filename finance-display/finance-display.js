@@ -8,6 +8,8 @@ import '@vaadin/vaadin-radio-button/vaadin-radio-group';
 import '@vaadin/vaadin-radio-button/vaadin-radio-button';
 import '@vaadin/vaadin-button/vaadin-button';
 import '@vaadin/vaadin-item/vaadin-item';
+import '@vaadin/vaadin-checkbox/vaadin-checkbox'
+import '@vaadin/vaadin-combo-box/vaadin-combo-box'
 
 export class FinanceDisplay extends LitElement {
 
@@ -52,9 +54,54 @@ export class FinanceDisplay extends LitElement {
                     <finance-list 
                         transactions="${JSON.stringify(this.transactions)}" 
                         filter="${JSON.stringify(this.filter)}" 
-                        restriction=1
-                        selectable>
+                        restriction=3
+                        selectable
+                        @item-clicked="${(evt) => {
+                            if(evt.detail.selected) {
+                                this.selectedItems.push(evt.detail.description);
+                            } else {
+                                this.selectedItems.splice(this.selectedItems.indexOf(evt.description));
+                            }
+                            this.requestUpdate();
+                        }}">
                     </finance-list>
+                </div>
+                <div class="two-two">
+                    <br />
+                    <br />
+                    <br />
+                    ${this.supportedCategories.map((category) => {
+                        return html`
+                            <vaadin-checkbox checked 
+                                             @change="${(evt) => {
+                                                 let categories = this.filter.categories;  //passed by reference
+                                                 let value = evt.target.innerText;
+                                                 let checked = evt.target.checked;
+                                                 if(checked) {
+                                                     categories.push(value);
+                                                     this.filter.categories = categories;
+                                                 } else {
+                                                     categories.splice( categories.indexOf(value), 1 );
+                                                     this.filter.categories = categories;
+                                                 }
+                                                this.requestUpdate();
+                                             }}">
+                                ${category}
+                            </vaadin-checkbox>
+                        `;
+                    })}
+                    <br />
+                    <vaadin-combo-box label="Type" items="${JSON.stringify(this.supportedTypes)}" 
+                                      @change="${(evt) => {
+                                          let type = evt.target.selectedItem;
+                                          type ? this.filter.types = new Array(type) : this.filter.types = this.supportedTypes;
+                                          this.requestUpdate();
+                                      }}">
+                    </vaadin-combo-box>
+                    <vaadin-combo-box label="FilterOperator" id="operator" items="${JSON.stringify(['EQ', 'GT', 'LT', 'BT'])}" @change="${this.handlePriceRange}"></vaadin-combo-box>
+                    <br />
+                    <vaadin-number-field id="PriceFrom" label="PriceFrom" step="0.01" has-controls @change="${this.handlePriceRange}"></vaadin-number-field>
+                    <vaadin-number-field id="PriceTo" label="PriceTo" step="0.01" has-controls disabled @change="${this.handlePriceRange}"></vaadin-number-field>
                 </div>
             </div>
         `;
@@ -66,6 +113,7 @@ export class FinanceDisplay extends LitElement {
             .one-one { grid-row: 1; grid-column-start: 1; grid-column-end: 11; }
             .one-two { grid-row: 1; grid-column: 11; }
             .two-one { grid-row: 2; grid-column-start: 1; grid-column-end: 11; }
+            .two-two { grid-row: 2; grid-column: 11; }
         `;
     }
 
@@ -73,21 +121,27 @@ export class FinanceDisplay extends LitElement {
         return {
             transactions: {type: Array},
             supportedCategories: {type: Array},
-            filter: {type: Object}
+            supportedTypes: {type: Array},
+            filter: {type: Object},
+            selectedItems: {type: Array}
         }
     }
 
     constructor() {
         super();
         this.transactions = [];
-        this.supportedCategories = ["Job", "Food", "Family", "Car", "Lifestyle"];
+        this.supportedCategories = ["Job", "Food", "Family", "Car", "Lifestyle", "Uncategorized"];
+        this.supportedTypes = ["profit", "loss"];
         this.filter = {
-            categories: this.supportedCategories,
-            priceRange: {operator: "BT",
-                firstValue: -99,
-                secondValue: 99
+            types: Object.assign(this.supportedTypes).flat(),
+            descriptions: [],
+            categories: Object.assign(this.supportedCategories).flat(),
+            priceRange: {operator: 'BT',
+                firstValue: -Number.MAX_VALUE,
+                secondValue: Number.MAX_VALUE
             }
         };
+        this.selectedItems = [];
 
     }
 
@@ -95,22 +149,40 @@ export class FinanceDisplay extends LitElement {
         let description = this.shadowRoot.getElementById('description');
         let price = this.shadowRoot.getElementById('price');
         let categories = Array.from(this.shadowRoot.getElementById('category').children);
-        let category = "";
+        let category = '';
         for(let element of categories) {
             if(element.checked)
                 category = element;
             element.checked = false;
         }
         let transaction = {
-            description: description.value,
-            price: Number(price.value),
-            positive: price.value >= 0,
-            category: category.innerText || "uncategorized"
+            type: price.value >= 0 ? this.supportedTypes[0] : this.supportedTypes[1],
+            description: description.value || 'No description provided',
+            category: category.innerText || 'Uncategorized',
+            price: Number(price.value)
         };
+        this.filter.descriptions = [...this.filter.descriptions, transaction.description];
         this.transactions = [...this.transactions, transaction];
-        description.value = "";
-        price.value = "";
+        description.value = '';
+        price.value = '';
     }
 
+    handlePriceRange() {
+        let operator = this.shadowRoot.getElementById('operator').selectedItem;
+        let priceFrom  = this.shadowRoot.getElementById('PriceFrom');
+        let priceTo  = this.shadowRoot.getElementById('PriceTo');
+        if(!operator) {
+            priceFrom.value = "";
+            priceTo.value = "";
+        }
+        operator === 'BT' ? priceTo.disabled = false : priceTo.disabled = true;
+
+        this.filter.priceRange = {
+            operator: operator,
+            firstValue: priceFrom.value ? Number(priceFrom.value) : undefined,
+            secondValue: priceTo.value ? Number(priceTo.value) : undefined
+        };
+        this.requestUpdate();
+    }
 }
-customElements.define("finance-display", FinanceDisplay);
+customElements.define('finance-display', FinanceDisplay);
