@@ -14,7 +14,7 @@ In case you want to develop an application based around web components, have a l
 
         npm install -g polymer-cli@next
 
-3. Install a bash shell. (optional)
+3. Install a bash shell. (Optional: Use Git Bash, Cygwin or something similar)
 
     3.1 Go to _settings_ > _update and security_ > _for developers_ and select _developer mode_.
     
@@ -33,18 +33,22 @@ In case you want to develop an application based around web components, have a l
     3.8 Create a new user (username and password)
     
     3.9 Run bash to install it
-
-3.  Change directory to the top-level project folder and install project dependencies:
+    
+4.  Change directory to the top-level project folder and install project dependencies.
 
         cd polymer-3-first-element
         npm install
    
-4. Set up a project in the IDE of your choice
+5. Set up a project in the IDE of your choice.
 
-5. Initialize a Polymer 3 element project
+6. Initialize a Polymer 3 element project.
 
         polymer init polymer-3-element 
         
-5. To preview your element, run the Polymer development server from the top-level project folder:
+7. Install the LitElement dependency.
+
+        npm install lit-element
+     
+8. To preview your element, run the Polymer development server from the top-level project folder.
 
         polymer serve --open

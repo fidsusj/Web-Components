@@ -11,6 +11,9 @@ import '@vaadin/vaadin-item/vaadin-item';
 import '@vaadin/vaadin-checkbox/vaadin-checkbox'
 import '@vaadin/vaadin-combo-box/vaadin-combo-box'
 
+const SupportedCategories = ["Job", "Food", "Family", "Car", "Lifestyle", "Uncategorized"];
+const SupportedTypes = ["profit", "loss"];
+
 export class FinanceDisplay extends LitElement {
 
     render() {
@@ -42,7 +45,7 @@ export class FinanceDisplay extends LitElement {
                     <vaadin-number-field id="price" label="Price in €" step="0.01" has-controls></vaadin-number-field>
                     <br />
                      <vaadin-radio-group id="category" label="Category">
-                        ${repeat(this.supportedCategories, (element) => element, (element) => html`
+                        ${repeat(SupportedCategories, (element) => element, (element) => html`
                             <vaadin-radio-button>${element}</vaadin-radio-button>
                         `)}
                     </vaadin-radio-group>
@@ -76,19 +79,16 @@ export class FinanceDisplay extends LitElement {
                     <br />
                     <br />
                     <br />
-                    ${this.supportedCategories.map((category) => {
+                    ${SupportedCategories.map((category) => {
                         return html`
                             <vaadin-checkbox checked 
                                              @change="${(evt) => {
-                                                 let categories = this.filter.categories;  //passed by reference
                                                  let value = evt.target.innerText;
                                                  let checked = evt.target.checked;
                                                  if(checked) {
-                                                     categories.push(value);
-                                                     this.filter.categories = categories;
+                                                     this.filter.categories.push(value);
                                                  } else {
-                                                     categories.splice( categories.indexOf(value), 1 );
-                                                     this.filter.categories = categories;
+                                                     this.filter.categories.splice( this.filter.categories.indexOf(value), 1 );
                                                  }
                                                 this.requestUpdate();
                                              }}">
@@ -97,10 +97,10 @@ export class FinanceDisplay extends LitElement {
                         `;
                     })}
                     <br />
-                    <vaadin-combo-box label="Type" items="${JSON.stringify(this.supportedTypes)}" 
+                    <vaadin-combo-box label="Type" items="${JSON.stringify(SupportedTypes)}" 
                                       @change="${(evt) => {
                                           let type = evt.target.selectedItem;
-                                          type ? this.filter.types = new Array(type) : this.filter.types = this.supportedTypes;
+                                          type ? this.filter.types = new Array(type) : this.filter.types = SupportedTypes;
                                           this.requestUpdate();
                                       }}">
                     </vaadin-combo-box>
@@ -126,8 +126,6 @@ export class FinanceDisplay extends LitElement {
     static get properties() {
         return {
             transactions: {type: Array},
-            supportedCategories: {type: Array},
-            supportedTypes: {type: Array},
             filter: {type: Object},
             selectedItems: {type: Array}
         }
@@ -136,12 +134,10 @@ export class FinanceDisplay extends LitElement {
     constructor() {
         super();
         this.transactions = [];
-        this.supportedCategories = ["Job", "Food", "Family", "Car", "Lifestyle", "Uncategorized"];
-        this.supportedTypes = ["profit", "loss"];
         this.filter = {
-            types: Object.assign(this.supportedTypes).flat(),
+            types: Object.assign(SupportedTypes).flat(),
             descriptions: [],
-            categories: Object.assign(this.supportedCategories).flat(),
+            categories: Object.assign(SupportedCategories).flat(),
             priceRange: {operator: 'BT',
                 firstValue: -Number.MAX_VALUE,
                 secondValue: Number.MAX_VALUE
@@ -162,7 +158,7 @@ export class FinanceDisplay extends LitElement {
             element.checked = false;
         }
         let transaction = {
-            type: price.value >= 0 ? this.supportedTypes[0] : this.supportedTypes[1],
+            type: price.value >= 0 ? SupportedTypes[0] : SupportedTypes[1],
             description: description.value || 'No description provided',
             category: category.innerText || 'Uncategorized',
             price: Number(price.value)
@@ -198,10 +194,10 @@ export class FinanceDisplay extends LitElement {
     }
 
     getListData() {
-        return this.transactions.slice(0,this.restriction).filter((element) => {
+        return this.transactions.filter((element) => {
             return (!this.filter.types || this.filter.types.includes(element.type)) &&
-                (!this.filter.categories || this.filter.categories.includes(element.category)) &&
-                (!this.filter.priceRange || this.filterPriceRange(element.price))
+                   (!this.filter.categories || this.filter.categories.includes(element.category)) &&
+                   (!this.filter.priceRange || this.filterPriceRange(element.price))
         });
     }
 

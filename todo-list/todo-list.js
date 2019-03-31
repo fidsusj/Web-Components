@@ -11,7 +11,7 @@ const VisibilityFilters = {
     SHOW_COMPLETED: 'Completed'
 };
 
-class TodoList extends LitElement {
+export class TodoList extends LitElement {
     static get properties() {
         return {
             todos: { type: Array },
@@ -126,5 +126,4 @@ class TodoList extends LitElement {
         return this;
     }
 }
-
 customElements.define('todo-list', TodoList);

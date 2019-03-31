@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import '@vaadin/vaadin-item/vaadin-item';
+import {styleMap} from "lit-html/directives/style-map";
 
 export class FinanceList extends LitElement {
 
@@ -7,7 +8,7 @@ export class FinanceList extends LitElement {
         return html`
             ${this.transactions.sort((obj, obj2) => {
                 return obj.price < obj2.price ? 1 : -1;
-            }).map((element) => {
+            }).slice(0,this.restriction).map((element) => {
                 return html`               
                     <vaadin-item id="selectable" tabindex="0"
                       @click="${ (evt) => {
@@ -25,7 +26,7 @@ export class FinanceList extends LitElement {
                           }
                       }}">
                       <span>${element.description}</span>
-                      <span class="${element.type}">${element.price + "$"}</span>
+                      <span style="${styleMap(this.buildStyle(element))}">${element.price + "$"}</span>
                     </vaadin-item>
                 `;
             })}
@@ -36,16 +37,6 @@ export class FinanceList extends LitElement {
         return css`
             vaadin-item[selected] {
                 background: var(--lumo-contrast-10pct);
-            }
-            
-            .profit {
-                color: green;
-                float: right;
-            }
-            
-            .loss {
-                color: red;
-                float: right;
             }
         `;
     }
@@ -70,6 +61,12 @@ export class FinanceList extends LitElement {
         this.transactions = [];
         this.selectable = false;
         this.restriction = "all";
+    }
+
+    buildStyle(element) {
+        let style = {float: 'right'};
+        element.type === "profit" ? style.color = 'green' : style.color = 'red';
+        return style;
     }
 
 }
