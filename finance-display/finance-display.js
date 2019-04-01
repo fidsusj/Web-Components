@@ -8,8 +8,8 @@ import '@vaadin/vaadin-radio-button/vaadin-radio-group';
 import '@vaadin/vaadin-radio-button/vaadin-radio-button';
 import '@vaadin/vaadin-button/vaadin-button';
 import '@vaadin/vaadin-item/vaadin-item';
-import '@vaadin/vaadin-checkbox/vaadin-checkbox'
-import '@vaadin/vaadin-combo-box/vaadin-combo-box'
+import '@vaadin/vaadin-checkbox/vaadin-checkbox';
+import '@vaadin/vaadin-combo-box/vaadin-combo-box';
 
 const SupportedCategories = ["Job", "Food", "Family", "Car", "Lifestyle", "Uncategorized"];
 const SupportedTypes = ["profit", "loss"];
@@ -77,7 +77,7 @@ export class FinanceDisplay extends LitElement {
                 </div>
                 <div class="two-two">
                     <br />
-                    <br />
+                    <hr />
                     <br />
                     ${SupportedCategories.map((category) => {
                         return html`
