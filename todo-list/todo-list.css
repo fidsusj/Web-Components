@@ -8,6 +8,6 @@ todo-list .input-layout {
 }
 
 todo-list .input-layout vaadin-text-field {
-     flex: 1;
+    flex: 1;
     margin-right: 10px;
  }
