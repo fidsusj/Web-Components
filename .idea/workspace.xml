@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01f0ae53-9c73-4a58-9d12-20ef476f576e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slides.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/slides.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-list/todo-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/todo-list/todo-list.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,11 +44,12 @@
           <entry key="LICENSE" value="1" />
           <entry key="css" value="21" />
           <entry key="gitignore" value="8" />
-          <entry key="html" value="25" />
+          <entry key="html" value="27" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="80" />
+          <entry key="js" value="83" />
           <entry key="json" value="18" />
           <entry key="md" value="6" />
+          <entry key="png" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
         </counts>
@@ -59,10 +57,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="21" />
-          <entry key="HTML" value="25" />
-          <entry key="Image" value="1" />
+          <entry key="HTML" value="27" />
+          <entry key="Image" value="2" />
           <entry key="JSON" value="18" />
-          <entry key="JavaScript" value="80" />
+          <entry key="JavaScript" value="83" />
           <entry key="Markdown" value="6" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="XML" value="1" />
@@ -75,7 +73,7 @@
           <entry key="html" value="719" />
           <entry key="js" value="3444" />
           <entry key="json" value="84" />
-          <entry key="md" value="3858" />
+          <entry key="md" value="7075" />
           <entry key="txt" value="540" />
         </counts>
       </usages-collector>
@@ -85,7 +83,7 @@
           <entry key="HTML" value="879" />
           <entry key="JSON" value="84" />
           <entry key="JavaScript" value="3284" />
-          <entry key="Markdown" value="3858" />
+          <entry key="Markdown" value="7075" />
           <entry key="PLAIN_TEXT" value="608" />
         </counts>
       </usages-collector>
@@ -100,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/todo-list/todo-list.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="38" selection-start-line="38" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="1955">
+              <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -122,13 +120,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/native/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="335">
-                <caret line="227" selection-start-line="227" selection-end-line="227" />
+              <first_editor relative-caret-position="260">
+                <caret line="367" column="1" lean-forward="true" selection-start-line="367" selection-start-column="1" selection-end-line="367" selection-end-column="1" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-161">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-778">
+              <caret line="115" selection-start-line="115" selection-end-line="123" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="24" column="53" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="24" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -206,7 +255,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-145" />
     <option name="y" value="80" />
     <option name="width" value="1940" />
@@ -230,7 +279,22 @@
             <path>
               <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
-              <item name="todo-list" type="462c0819:PsiDirectoryNode" />
+              <item name="finance-display" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="native" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebComponents" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="stock-panel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,12 +397,12 @@
       <workItem from="1554122262592" duration="9511000" />
       <workItem from="1554148998360" duration="1280000" />
       <workItem from="1554184008090" duration="6099000" />
-      <workItem from="1554222345724" duration="5005000" />
+      <workItem from="1554222345724" duration="10645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98822000" />
+    <option name="totallyTimeSpent" value="104462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,10 +414,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1764706" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1764706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,7 +429,7 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4990086" weight="0.32850942" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.53055847" visible="true" weight="0.24167873" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.53055847" visible="true" weight="0.24746744" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.45869133" side_tool="true" weight="0.0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -435,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/time-clock/time-clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -480,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/native/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/native/hello-world.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -498,16 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -528,13 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tutorial.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -545,18 +578,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
+    <entry file="file://$PROJECT_DIR$/polymer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/web_component.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/native/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="115" selection-start-line="115" selection-end-line="123" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/polymer.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="31" selection-start-line="31" selection-end-line="31" selection-end-column="106" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo-list/todo-list.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,23 +605,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="335">
-            <caret line="227" selection-start-line="227" selection-end-line="227" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/stock-panel/stock-panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/todo-list/todo-list.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="38" selection-start-line="38" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="1955">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="121" selection-start-column="9" selection-end-line="121" selection-end-column="9" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance-display/finance-display.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-778">
+          <caret line="115" selection-start-line="115" selection-end-line="123" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finance-display/finance-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="24" column="53" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="24" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="260">
+            <caret line="367" column="1" lean-forward="true" selection-start-line="367" selection-start-column="1" selection-end-line="367" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
